@@ -1,5 +1,6 @@
 package com.hanuor.androidkotlinsamples
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
@@ -11,5 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val helloWorld = findViewById(R.id.helloWorld) as TextView
         helloWorld.setText("Hey world!. This is Kotlin!")
+        val color = Color.parseColor("#bdbdbd")
+        helloWorld.setTextColor(color)
+
     }
 }
