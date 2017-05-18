@@ -1,7 +1,8 @@
 # Android + ~~Java~~ Kotlin   
-Android Kotlin samples     
+Android Kotlin samples 
+Because converting code is too mainstream.
 ____
-Get started with the new official language for Android app development - Kotlin.
+Get started with the new official language for Android app development - Kotlin. 
 #### Code samples, instructions and much more
 
 ## Getting started    
