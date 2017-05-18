@@ -1,6 +1,7 @@
 # Android + ~~Java~~ Kotlin   
-
-Get started with the new official language for Android development - Kotlin.
+Android Kotlin samples     
+____
+Get started with the new official language for Android app development - Kotlin.
 #### Code samples, instructions and much more
 
 ## Getting started    
