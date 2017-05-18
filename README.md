@@ -66,4 +66,7 @@ In Kotlin we do:
  startActivity(trigger)
  ```
  Here *trigger* is the Intent object.
- The second parameter *SecondActivity::class.java* looks fishy right? Well this is how we pass a reference to a class (in this case our activity) in Kotlin. See this link for more information: [Class references in Kotlin](https://kotlinlang.org/docs/reference/reflection.html#class-references)
+ The second parameter *SecondActivity::class.java* looks fishy right? Well this is how we pass a reference to a class (in this case our activity) in Kotlin. See this link for more information: [Class references in Kotlin](https://kotlinlang.org/docs/reference/reflection.html#class-references)    
+ _____
+
+
