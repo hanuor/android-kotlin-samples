@@ -1,5 +1,6 @@
 package com.hanuor.androidkotlinsamples
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -26,15 +27,12 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener(object: View.OnClickListener{
             override fun onClick(v: View?) {
                 Toast.makeText(this@MainActivity, "hey there!", Toast.LENGTH_SHORT).show()
-
+                val vas: Intent
+                vas.setClass(this@MainActivity, )
             }
 
         });
-
-
     }
-
     fun setViews(){
-
     }
 }
