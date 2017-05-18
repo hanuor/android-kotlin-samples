@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener(object: View.OnClickListener{
             override fun onClick(v: View?) {
                 Toast.makeText(this@MainActivity, "hey there!", Toast.LENGTH_SHORT).show()
-                val vas: Intent
-                vas.setClass(this@MainActivity, )
+                val trigger = Intent(this@MainActivity, SecondActivity::class.java)
+                startActivity(trigger)
             }
 
         });
