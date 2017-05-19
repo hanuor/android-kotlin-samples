@@ -1,11 +1,14 @@
 package com.hanuor.androidkotlinsamples
 
+import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class SecondActivity : AppCompatActivity() {
 
@@ -23,8 +26,31 @@ class SecondActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 var getText: String = editText.getText().toString()
                 backtext.setText(getText)
+                asyncTaskFlash()
+
+            }
+        })
+    }
+
+
+    fun asyncTaskFlash(){
+        Log.d("Hey", "sdsdsds")
+        object: AsyncTask<Void, Void, String>(){
+            override fun doInBackground(vararg params: Void?): String {
+                var sampleJson: String = "https://gist.githubusercontent.com/hanuor/c3a94602155d23e46daac9c18903899d/raw/ae5313ad810308dcfbfda2dda75bcee73c8830d6/sampleJson"
+              Log.d("ghee","asdas" + sampleJson)
+                try {
+
+                }catch (Exception e)(
+
+                )
+             return sampleJson
             }
 
-        })
+            override fun onPostExecute(result: String?) {
+                super.onPostExecute(result)
+                Toast.makeText(this@SecondActivity, " Hey " + result, Toast.LENGTH_SHORT).show()
+            }
+        }.execute()
     }
 }
