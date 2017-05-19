@@ -69,6 +69,35 @@ In Kotlin we do:
  ```
  Here *trigger* is the Intent object.
  The second parameter *SecondActivity::class.java* looks fishy right? Well this is how we pass a reference to a class (in this case our activity) in Kotlin. See this link for more information: [Class references in Kotlin](https://kotlinlang.org/docs/reference/reflection.html#class-references)    
+ 
+ ### AsyncTasks
+ To create an object of a class in Kotlin we used the *object* keyword. Similarly here also we'll use this to make object of our AyncTask class.
+ *Notice that you can copy and paste your Java code and Studio will automatically convert it to Kotlin.*
+ Kotlin code:
+ ```kotlin
+ object: AsyncTask<Void, Void, String>(){
+            override fun doInBackground(vararg params: Void?): String {
+                var sampleJson: String =  "https://gist.githubusercontent.com/hanuor/c3a94602155d23e46daac9c18903899d/raw/ae5313ad810308dcfbfda2dda75bcee73c8830d6/sampleJson"
+                //Do some task here
+                try {
+                    //some task here
+                    Log.d("SecondActivity", " " + jsonObject)
+                }catch (e : Exception){
+                    e.printStackTrace()
+                }
+             return sampleJson
+            }
+
+            override fun onPostExecute(result: String?) {
+                super.onPostExecute(result)
+                Toast.makeText(this@SecondActivity, "HelloWorld" + result, Toast.LENGTH_SHORT).show()
+            }
+        }.execute()
+```
+```kotlin
+object: AsyncTask<Void, Void, String>()
+```
+
  _____
 
 
