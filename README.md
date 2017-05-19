@@ -1,4 +1,5 @@
 # Android + ~~Java~~ Kotlin   
+[![kotlin_250x250.png](https://s16.postimg.org/6slikb3ud/kotlin_250x250.png)](https://postimg.org/image/b1q8mh73l/)     
 Android Kotlin samples     
 Because converting code is too mainstream.
 ____
