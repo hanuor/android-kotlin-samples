@@ -3,13 +3,11 @@ package com.hanuor.androidkotlinsamples
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import org.json.JSONObject
 
 class SecondActivity : AppCompatActivity() {
 
@@ -40,8 +38,7 @@ class SecondActivity : AppCompatActivity() {
                 var sampleJson: String = "https://gist.githubusercontent.com/hanuor/c3a94602155d23e46daac9c18903899d/raw/ae5313ad810308dcfbfda2dda75bcee73c8830d6/sampleJson"
                 //Do some task here
                 try {
-                    val jsonObject: JSONObject = JSONObject(sampleJson)
-                    Log.d("sample", " " + jsonObject)
+                    //Do some task here
                 }catch (e : Exception){
                     e.printStackTrace()
                 }
