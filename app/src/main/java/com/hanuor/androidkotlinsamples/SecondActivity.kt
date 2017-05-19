@@ -2,6 +2,7 @@ package com.hanuor.androidkotlinsamples
 
 import android.os.AsyncTask
 import android.os.Bundle
+import android.support.v4.app.FragmentActivity
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
@@ -9,6 +10,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import org.json.JSONObject
+import java.io.BufferedInputStream
+import java.io.IOException
+import java.net.HttpURLConnection
+import java.net.MalformedURLException
+import java.net.ProtocolException
+import java.net.URL
 
 class SecondActivity : AppCompatActivity() {
 
@@ -40,10 +48,28 @@ class SecondActivity : AppCompatActivity() {
                 var sampleJson: String = "https://gist.githubusercontent.com/hanuor/c3a94602155d23e46daac9c18903899d/raw/ae5313ad810308dcfbfda2dda75bcee73c8830d6/sampleJson"
               Log.d("ghee","asdas" + sampleJson)
                 try {
+                    val url = URL(sampleJson)
+                    val conn = url.openConnection() as HttpURLConnection
+                    conn.setRequestMethod("GET")
+                    // read the response
+                    val buff = BufferedInputStream(conn.getInputStream())
+                    response = convertStreamToString(buff)
+                } catch (e: MalformedURLException) {
+                    Log.e(FragmentActivity.TAG, "MalformedURLException: " + e.getMessage())
+                } catch (e: ProtocolException) {
+                    Log.e(FragmentActivity.TAG, "ProtocolException: " + e.getMessage())
+                } catch (e: IOException) {
+                    Log.e(FragmentActivity.TAG, "IOException: " + e.getMessage())
+                } catch (e: Exception) {
+                    Log.e(FragmentActivity.TAG, "Exception: " + e.message)
+                }
 
-                }catch (Exception e)(
+                try {
+                    val jsonObject: JSONObject = JSONObject(sampleJson)
+                    Log.d("sample", " " + jsonObject)
+                }catch (e : Exception){
 
-                )
+                }
              return sampleJson
             }
 
