@@ -5,6 +5,17 @@ Because converting code is too mainstream.
 ____
 Get started with the new official language for Android app development - Kotlin. 
 #### Code samples, instructions and much more
+_____        
+### Contents      
++ [Getting Started](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#getting-started)       
++ [FindViewById](https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#findviewbyid)    
++ [OnClickListeners](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#onclicklisteners)    
++ [Start a new activity](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#starting-a-new-activity)    
++ [AsyncTasks](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#asynctasks)       
 
 ## Getting started    
 [![Android+Studio+3.0.png](https://s13.postimg.org/pk0yemg13/Android_Studio_3.0.png)](https://postimg.org/image/t3mw4fiqr/)    
@@ -69,6 +80,36 @@ In Kotlin we do:
  ```
  Here *trigger* is the Intent object.
  The second parameter *SecondActivity::class.java* looks fishy right? Well this is how we pass a reference to a class (in this case our activity) in Kotlin. See this link for more information: [Class references in Kotlin](https://kotlinlang.org/docs/reference/reflection.html#class-references)    
+ 
+ ### AsyncTasks
+ To create an object of a class in Kotlin we used the *object* keyword. Similarly here also we'll use this to make object of our AyncTask class.
+ *Notice that you can copy and paste your Java code and Studio will automatically convert it to Kotlin.*
+ Kotlin code:
+ ```kotlin
+ object: AsyncTask<Void, Void, String>(){
+            override fun doInBackground(vararg params: Void?): String {
+                var sampleJson: String =  "https://gist.githubusercontent.com/hanuor/c3a94602155d23e46daac9c18903899d/raw/ae5313ad810308dcfbfda2dda75bcee73c8830d6/sampleJson"
+                //Do some task here
+                try {
+                    //some task here
+                    Log.d("SecondActivity", " " + jsonObject)
+                }catch (e : Exception){
+                    e.printStackTrace()
+                }
+             return sampleJson
+            }
+
+            override fun onPostExecute(result: String?) {
+                super.onPostExecute(result)
+                Toast.makeText(this@SecondActivity, "HelloWorld" + result, Toast.LENGTH_SHORT).show()
+            }
+        }.execute()
+```
+```kotlin
+object: AsyncTask<Void, Void, String>()
+```
+We are creating an object of AsyncTask task here. This takes three types of parameters *<params, progress, result>*. Next comes the overriding of the *doInBackground* function. Take a look if you're finding this line of code difficult to understand: [Functions in Kotlin](https://kotlinlang.org/docs/reference/functions.html)
+Next we have *result: String?* . So this means that we have a variable 'result' of String datatype. '?' is written here to allow 'result' to be null. See this for more reference. [Null safety in Kotlin](https://kotlinlang.org/docs/reference/null-safety.html)
  _____
 
 
