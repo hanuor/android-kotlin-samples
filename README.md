@@ -10,7 +10,7 @@ Get started with the new official language for Android app development - Kotlin.
 As of now Kotlin based IDE hasn't officially launched yet. But we are developers eh! Follow this link to download Android studio 3.0 (Canary) :        
 ##### Download    
 [Android studio 3.0 preview](https://developer.android.com/studio/preview/index.html)   
-*If you are working on stable version then don't freak out. This version won't affect your existing work/settings/environment etc.*   
+*If you are working on a stable version then don't freak out. This version won't affect your existing work/settings/environment etc.*   
 
 ### findViewById
 Till now we were using  
