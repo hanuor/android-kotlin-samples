@@ -97,7 +97,8 @@ In Kotlin we do:
 ```kotlin
 object: AsyncTask<Void, Void, String>()
 ```
-
+We are creating an object of AsyncTask task here. This takes three types of parameters *<params, progress, result>*. Next comes the overriding of the *doInBackground* function. Take a look if you're finding this line of code difficult to understand: [Functions in Kotlin](https://kotlinlang.org/docs/reference/functions.html)
+Next we have *result: String?* . So this means that we have a variable 'result' of String datatype. '?' is written here to allow 'result' to be null. See this for more reference. [Null safety in Kotlin](https://kotlinlang.org/docs/reference/null-safety.html)
  _____
 
 
