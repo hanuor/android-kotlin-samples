@@ -5,6 +5,17 @@ Because converting code is too mainstream.
 ____
 Get started with the new official language for Android app development - Kotlin. 
 #### Code samples, instructions and much more
+_____        
+### Contents      
++ [Getting Started](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#getting-started)       
++ [FindViewById](https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#findviewbyid)    
++ [OnClickListeners](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#onclicklisteners)    
++ [Start a new activity](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#starting-a-new-activity)    
++ [AsyncTasks](
+https://github.com/hanuor/android-kotlin-samples/blob/master/README.md#asynctasks)       
 
 ## Getting started    
 [![Android+Studio+3.0.png](https://s13.postimg.org/pk0yemg13/Android_Studio_3.0.png)](https://postimg.org/image/t3mw4fiqr/)    
