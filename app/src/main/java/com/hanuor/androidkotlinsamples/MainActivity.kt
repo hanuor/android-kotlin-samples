@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 Toast.makeText(this@MainActivity, "hey there!", Toast.LENGTH_SHORT).show()
                 val trigger = Intent(this@MainActivity, SecondActivity::class.java)
+                trigger.putExtra("yolo","insamareen")
+
                 startActivity(trigger)
             }
 
