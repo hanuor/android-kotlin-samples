@@ -9,11 +9,16 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
+
+
 class SecondActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+        val intent = intent
+        val ss = intent.getStringExtra("yolo")
+        Toast.makeText(this@SecondActivity, " Step up" + ss, Toast.LENGTH_SHORT).show()
         val backtext = findViewById(R.id.backText) as TextView
         backtext.setText("Enter some text")
         val edittext = findViewById(R.id.editText) as EditText
