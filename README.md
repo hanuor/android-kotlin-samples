@@ -81,6 +81,13 @@ In Kotlin we do:
  Here *trigger* is the Intent object.
  The second parameter *SecondActivity::class.java* looks fishy right? Well this is how we pass a reference to a class (in this case our activity) in Kotlin. See this link for more information: [Class references in Kotlin](https://kotlinlang.org/docs/reference/reflection.html#class-references)    
  
+ #### getIntent()
+ ```kotlin
+   val intent_get_data = intent
+        val ssbat = intent.getStringExtra("yolo")
+```      
+In Kotlin we don't use methods like *getIntent()*. Instead we have 'intent' which acts as a wrapper fpr these functions. Next we see that we don't have to specify the data type to store value from the received intent, just like in Python. This makes our code a hella more short,and enhances readability too.
+ 
  ### AsyncTasks
  To create an object of a class in Kotlin we used the *object* keyword. Similarly here also we'll use this to make object of our AyncTask class.
  *Notice that you can copy and paste your Java code and Studio will automatically convert it to Kotlin.*
@@ -110,6 +117,10 @@ object: AsyncTask<Void, Void, String>()
 ```
 We are creating an object of AsyncTask task here. This takes three types of parameters *<params, progress, result>*. Next comes the overriding of the *doInBackground* function. Take a look if you're finding this line of code difficult to understand: [Functions in Kotlin](https://kotlinlang.org/docs/reference/functions.html)
 Next we have *result: String?* . So this means that we have a variable 'result' of String datatype. '?' is written here to allow 'result' to be null. See this for more reference. [Null safety in Kotlin](https://kotlinlang.org/docs/reference/null-safety.html)
- _____
+
+
+
+
+_____
 
 
